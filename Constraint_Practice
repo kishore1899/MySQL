@@ -1,0 +1,12 @@
+creat database sqllearn;
+use sqllearn;
+create table constrain_test(
+eid int primary key,
+name varchar(50) not null,
+salary int,
+bg varchar(20) default'o+ve',
+age int check ( age between 18 and 60),
+email varchar (50) unique
+)
+select * from constrain_test;
+insert into constrain_test (eid,name,salary,age,email) values (1,'cholan',9900000,25,'chola@1010gmail.com')
